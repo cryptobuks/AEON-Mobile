@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Didact+Gothic&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext");
+body:not(.animate) .animate {
+ -webkit-transition:none;
+    -moz-transition:none;
+     -ms-transition:none;
+         transition:none;
+}
+h1,
+h2,
+h3,
+h4,
+.button,
+li,
+ul,
+input {
+  font-family: "Anonymous Pro", monospace;
+}
+* {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 16px;
+}
+* {
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: none;
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body,
+#parent {
+  height: 100%;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 16px;
+  background: #000000;
+}
+.button {
+  font-size: 16px;
+}
+input {
+  font-size: 16px;
+}
+label {
+  font-size: 16px;
+}
+.rounded-toggle > label {
+  font-size: 16px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-device-pixel-ratio: 1.25),
+  only screen and (min-resolution: 200dpi),
+  only screen and (min-resolution: 1.25dppx) {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+body:not(.animate) .animate {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+body {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  padding: 0;
+  margin: 0;
+}
+#wallet, #miner, #parent {
+  background: #000000;
+}
+.aeon {
+  height: 50%;
+  position: absolute;
+  opacity: 0.25;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media only screen and (max-width: 640px) {
+  #aeon {
+    height: 50%;
+  }
+}
+input[type="text"] {
+  border: none;
+  border-radius: 0;
+}
+input[type="text"]:focus {
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-right-width: 2;
+}
+.checkbox-pill input[type="checkbox"] {
+  display: none;
+}
+.checkbox-pill input[type="checkbox"] + *:before {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.checkbox-pill input[type="checkbox"]:not(:checked) + *:before {
+  content: "";
+}
+.checkbox-pill input[type="checkbox"]:checked + .button {
+  background-color: #223b53;
+}
+.checkbox-pill input[type="checkbox"]:checked + .button.quiet {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.checkbox-pill input[type="checkbox"]:checked + .button.loud {
+  background-color: #3bb2d0;
+}
+.dark.checkbox-pill input[type="checkbox"]:checked + .button.quiet,
+.dark .checkbox-pill input[type="checkbox"]:checked + .button.quiet {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.dark .rounded-toggle input[type="radio"]:checked + label,
+.dark .rounded-toggle .active {
+  background: rgba(65,175,165,0.6);
+}
+.rounded-toggle input[type="radio"]:checked + label,
+.rounded-toggle .active {
+  background: rgba(65,175,165,0.5);
+}
+.radio-pill .pill {
+  background: #50667f;
+}
+#scanWalletID > icon {
+  font-size: 22px;
+}
+#cpuIntensity {
+  height: 20px;
+  border: 3px solid transparent;
+}
+
+.dark #cpuIntensity {
+  background: rgba(238,238,238,0.2);
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #50667f;
+  height: 36px;
+  width: 30px;
+  border-radius: 5px;
+  background: #50667f;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #50667f, 0px 0px 1px #50667f; /* Add cool effects to your sliders! */
+}
+#receive {
+  font-size: 12px;
+}
+#QR {
+  position: relative;
+  overflow: hidden;
+  overflow: hidden;
+  width: 50%;
+  left: 25%;
+}
+.QRenlarge {
+  background: #eee;
+  background-size: 110%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -moz-transform: scale(2.0);
+  -webkit-transform: scale(2.0);
+  transform: scale(2.0);
+  z-index: 10000;
+}
+#intensity > input[type="radio"]:checked + .button {
+  background: rgba(0,0,0,0.5);
+}
+  .accordion-toggle {cursor: pointer;}
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}

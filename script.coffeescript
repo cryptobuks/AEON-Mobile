@@ -1,0 +1,54 @@
+setTimeout document.body.className += ' animate', 0
+
+$('.publicKey').click (e) ->
+    console.log(e)
+    $('.sendAddress').val(e.target.id)
+    $('.publicKey').removeClass('fill-darken1')
+    $(e.target).toggleClass('fill-darken1')
+
+$('.savedWalletID').click ->
+      $(this).next().slideToggle('fast');
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
+$('#clearWalletID').on "click", (event) =>
+    $('#walletID').val('')
+    $('#clearWalletID').addClass('quiet')
+    
+$('#walletID').on "keypress", ->
+    $('#clearWalletID').removeClass('quiet')
+    
+$('#startMining, #stopMining').on "click", (event) =>
+    $(event.target).toggleClass('quiet').siblings().toggleClass('quiet')
+  
+$('#lightTheme, #darkTheme').on "click", (event) =>
+    if event.target.id is 'lightTheme'
+      $("*").attr('style', 'font-family: "Didact Gothic", sans-serif;')
+      $('#parent, #miner, #wallet').attr('style', 'background: #eee') $('#parent').toggleClass('dark')
+    else
+      $("*").attr('style', 'font-family: "Anonymous Pro", monospace;')
+      $('#parent, #miner, #wallet').attr('style', 'background: #000000') $('#parent').toggleClass('dark')
+$('#minePowered, #thermalThrottle').on "click", (event) =>
+    $(event.target).toggleClass('quiet')
+    
+$('#cpuIntensity').on "click", (event) =>
+    $('.intensity').text(event.target.value+'%')
+    
+$('#QR').on 'click', ->
+    $('#QR').toggleClass('QRenlarge')
+    
+$('.scanWalletID').on "click", (event) =>
+    ###cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+                $('#walletID').val('')
+      },
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );###
+    
+    
+        

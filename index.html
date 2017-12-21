@@ -1,0 +1,109 @@
+<div id='parent' class='col12 center clip contain dark'>
+    <div id='wallet' class='animate offcanvas-left pin-left col4 keyline-right active pad2 scroll-styled'>
+      <img class='aeon' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/584902/AEON_logo_SVG.svg'></img>
+      <div class="col12 clearfix center contain space-bottom0">
+        <div class='col12 center clearfix'><h1 id='#balance' class=''>170000 <span class='coin'>Æ</span></h1><h3></h3></div>
+        <div class='col12 center clearfix'><h3>Locked: <span class='unconfirmed'>50</span></h3></div>
+  </div>
+      <div class='col12'><h2>Send</h2></div>
+    <div class="input-pill col12 contain clearfix space-bottom0 fill-lighten1 mobile-cols space-bottom0">
+      <input id='receive' placeholder="Send Address" type="text" class='col9 sendAddress'/>
+      <a class='button col3 fill-cyan ion-paper-airplane'> Send</a>
+      </div>
+  <div class="pad2 pill clearfix contain mobile-cols space-bottom0">
+    <a class="scanWalletID col6 button icon ion-ios-barcode-outline fill-darkblue">Scan Code</a>
+    <a class="savedWalletID col6 button icon ion-ios-folder fill-darkblue accordion-toggle">Addresses</a>
+    <div class='col12 pad0 fill-darkblue accordion-content scroll-styled keyline-bottom'>
+      <ul class=''>
+        <li><h3 id='WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs' class='publicKey'>AEON Dev Fund: WmsSWg</h3><ul>
+    <li class='publicKey'>&nbsp;Sub address for multisig</li>
+    <li class='publicKey'>&nbsp;Sub address for LN</li>
+    </ul></li>
+        <li><h3 id='WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs' class='publicKey' id='My Public Address'>My Addresses: WmsSWg</h3></li>
+        <li class='publicKey' id='My Public SubAddress'>&nbsp;Savings</li>
+        <li class='publicKey' id='My Public SubAddress'>&nbsp;Vacation</li>
+      </ul>
+    </div>
+  </div>
+      <div class='col12'><h2>Receive</h2></div>
+  <div class="col12 with-icon-right space-bottom0 fill-lighten1">
+    <a id='' class="icon ion-ios-copy" onclick='$("#receive").select();document.execCommand("Copy");'></a>
+    <input id='receive' placeholder="Wallet Address" type="text" value='WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs' class='col12 address'/>
+  </div>
+  <div id="QR" class="pad4 clearfix center contain mobile-cols space-bottom0"><img class='' src='https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs'></img></div>
+  <a href='#miner' id='navButton' class='col12 button fill-blue icon ion-settings'>Settings</a>
+    </div>
+<div id='miner' class='col4 animate offcanvas-left pin-left col12 keyline-right pad2 scroll-styled'>
+  <img class='aeon' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/584902/AEON_logo_SVG.svg'></img>
+      <div class='col12 pad2 clearfix center contain mobile-cols space-bottom0'>
+    <h1 id='title' class='pad1 center '>AEON Micro Miner</h1>
+  </div>
+  <div class="col12 with-icon-right space-bottom0 fill-lighten1">
+    <a id='clearWalletID' class="icon ion-close-round"></a>
+    <input id='walletID' placeholder="Wallet Address" type="text" class='col12 '/>
+  </div>
+  <div class="pad2 pill clearfix contain mobile-cols space-bottom0">
+    <a id='scanWalletID' class="col6 button icon ion-ios-barcode-outline fill-darkblue ">Scan Code</a>
+    <a id='' class="savedWalletID col6 button icon ion-ios-folder fill-darkblue ">Addresses</a>
+    <div class='col12 pad0 dark fill-darkblue accordion-content scroll-styled keyline-bottom'>
+      <ul class=''>
+        <li><h3 id='WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs' class='publicKey'>AEON Dev Fund: WmsSWg</h3><ul>
+    <li class='publicKey'>&nbsp;Sub address for multisig</li>
+    <li class='publicKey'>&nbsp;Sub address for LN</li>
+    </ul></li>
+        <li><h3 id='WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs' class='publicKey' id='My Public Address'>My Addresses: WmsSWg</h3></li>
+        <li class='publicKey' id='My Public SubAddress'>&nbsp;Savings</li>
+        <li class='publicKey' id='My Public SubAddress'>&nbsp;Vacation</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pad2 clearfix contain mobile-cols space-bottom0">
+    <div class='pill col12 mobile-cols space-bottom0'>
+      <a id='startMining' class='col6 button fill-cyan'>Start</a>
+      <a id='stopMining' class='col6 button fill-red quiet'>Stop</a>
+    </div>
+</div>
+<h3>Mining Power</h3>
+    <div class="clearfix round contain fill-cyan space-bottom0 center">
+      <div id='intensity' class='round col12 radio-pill pill mobile-cols'>
+        <input type='radio' name='intensity' id='10%' >
+  <label for='10%' class='col3 button short icon check fill-lighten3 round-left'>10%</label>
+  <input type='radio' name='intensity' id='50%'>
+  <label for='50%' class='col3 button short icon check fill-lighten2'>50%</label>
+  <input type='radio' name='intensity' id='75%' checked='checked'>
+  <label for='75%' class='col3 button short icon check fill-lighten1' >75%</label>
+  <input type='radio' name='intensity' id='90%'>
+  <label for='90%' class='col3 button short icon check fill-lighten0 round-right'>90%</label>
+      </div>
+  </div>
+
+  <div class="pad2 clearfix contain mobile-cols space-bottom0">
+    <div class="col12 checkbox-pill pill round">
+      <input type='checkbox' name='miningOptions' id='minePowered'>
+      <label for='minePowered' class='col12 button fill-teal icon ion-checkmark-round'>Mine only when powered.</label>
+      <input type='checkbox' name='miningOptions' id='mineWiFi'>
+      <label for='mineWiFi' class='col12 button fill-blue icon ion-checkmark-round'>Mine only on WiFi.</label>
+      <input type='checkbox' name='miningOptions' id='thermalThrottle' checked='checked'>
+      <label for='thermalThrottle' class='col12 button fill-darkblue icon ion-checkmark-round'>Keep device cool.</label>
+
+    </div>
+  </div>
+<div class="pad2 clearfix contain mobile-cols space-bottom0">
+  <div class='pad2 radio-pill pill clearfix col12'>
+  <input type='radio' name='sync' id='syncChain'>
+  <label for='syncChain' class='col12 short button fill-cyan icon ion-checkmark-round'>Sync chain to device.</label>
+  <input type='radio' name='sync' id='remoteNode' checked='checked'>
+  <label for='remoteNode' class='col12 short button icon ion-checkmark-round'>Use remote node.</label>
+</div>
+  <div class="col12 pad2 clearfix contain space-bottom0">
+    <div class='rounded-toggle pad0'>
+      <label>Mode:</label>
+      <input id='light' type='radio' name='rtoggle' value='light'>
+      <label id='lightTheme' for='light' class=''>Light</label>
+      <input id='dark' type='radio' name='rtoggle' value='dark' checked='checked'>
+      <label id='darkTheme' for='dark' class=''>Dark</label>
+    </div>
+  </div>
+  <a href='#wallet' id='navButton' class='col12 button fill-blue icon ion-arrow-left-c'>Wallet</a>
+    </div>
+      </div>
